@@ -146,7 +146,7 @@ export KSUVER=40129
 
 KSU_API_VERSION=4.0.0
 
-KSU_VERSION_FULL="v${KSU_API_VERSION}-40129-xiaoxiaow@builtin"
+KSU_VERSION_FULL="v${KSU_API_VERSION}-40129-ziantt@builtin"
 
 sed -i '/define get_ksu_version_full/,/endef/d' kernel/Makefile
 sed -i '/KSU_VERSION_API :=/d' kernel/Makefile
@@ -158,7 +158,7 @@ while IFS= read -r line; do
   if echo "$line" | grep -q 'REPO_OWNER :='; then
     cat >> "$TMP_FILE" <<EOF
 define get_ksu_version_full
-v\\\$\$1-40129-xiaoxiaow@builtin
+v\\\$\$1-40129-ziantt@builtin
 endef
 
 KSU_VERSION_API := ${KSU_API_VERSION}
